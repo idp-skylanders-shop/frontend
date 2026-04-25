@@ -1,0 +1,195 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.magic-btn {
+  background: linear-gradient(180deg, #4facfe 0%, #00f2fe 100%);
+  border: 2px solid #ffffff;
+  border-radius: 25px;
+  color: white;
+  font-family: 'Verdana', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 12px 30px;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.magic-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 242, 254, 0.8);
+}
+
+.magic-btn:active {
+  transform: scale(0.95);
+}
+
+.navbar {
+  position: relative;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  background-color: transparent;
+}
+
+.top-right {
+  position: absolute;
+  right: 30px;
+}
+
+.login-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f8ff;
+}
+
+.login-box {
+  position: relative;
+  width: 300px;
+  min-height: 350px;
+  background: transparent;
+
+  border: 2px solid #4facfe;
+  border-radius: 15px;
+  overflow: hidden; 
+}
+
+.login-bg-layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.login-content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  background: rgba(255,255,255,0.6);
+}
+
+.magic-input {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+.magic-input:focus {
+  border-color: #4facfe;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+/* Logica pentru slider dublu, nu exista suport default, se folosesc
+    doua inputuri de tip range suprapuse
+*/
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 50px;
+}
+
+.slider-track {
+  position: absolute;
+  border-radius: 3px;
+  height: 5px;
+  background-color: #ddd;
+  width: 100%;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slider-range {
+  position: absolute;
+  border-radius: 3px;
+  height: 5px;
+  background-color: #007bff;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.thumb {
+  pointer-events: none;
+  position: absolute;
+  height: 0; 
+  width: 100%;
+  outline: none;
+  z-index: 3;
+  top: 50%; 
+}
+
+.thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  pointer-events: all;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: none;
+  background-color: #007bff;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.thumb::-moz-range-thumb {
+  pointer-events: all;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: none;
+  background-color: #007bff;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
