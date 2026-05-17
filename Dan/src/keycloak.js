@@ -1,8 +1,8 @@
 import Keycloak from "keycloak-js";
 
 const keycloak = new Keycloak({
-  url: "/admin", // MERGE LA CONTAINER DOCKER
-  realm: "skylander_shop", // REALM-UL CREAT PE KEYCLOACK
+  url: "",        // empty = same origin; Kong routes /realms -> Keycloak
+  realm: "skylander_shop",
   clientId: "react-frontend",
 });
 
